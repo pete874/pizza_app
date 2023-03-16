@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\pizza_app",
+    "\\pizza_app\\pizza_app"
   ],
+  "SelectedNode": "\\pizza_app\\pizza_app\\Form1.cs",
   "PreviewInSolutionExplorer": false
 }
