@@ -48,10 +48,10 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel1.Controls.Add(this.TuotteetBT);
             this.panel1.Controls.Add(this.HeaderLB);
             this.panel1.Controls.Add(this.VahvistaBT);
             this.panel1.Controls.Add(this.MaksaBT);
-            this.panel1.Controls.Add(this.TuotteetBT);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -62,13 +62,18 @@
             // 
             // TuotteetBT
             // 
-            this.TuotteetBT.Location = new System.Drawing.Point(226, 36);
+            this.TuotteetBT.BackColor = System.Drawing.Color.Black;
+            this.TuotteetBT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.TuotteetBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.TuotteetBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TuotteetBT.ForeColor = System.Drawing.Color.MediumAquamarine;
+            this.TuotteetBT.Location = new System.Drawing.Point(242, 36);
             this.TuotteetBT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TuotteetBT.Name = "TuotteetBT";
             this.TuotteetBT.Size = new System.Drawing.Size(120, 28);
             this.TuotteetBT.TabIndex = 0;
             this.TuotteetBT.Text = "Tuotteet";
-            this.TuotteetBT.UseVisualStyleBackColor = true;
+            this.TuotteetBT.UseVisualStyleBackColor = false;
             // 
             // VahvistaBT
             // 
