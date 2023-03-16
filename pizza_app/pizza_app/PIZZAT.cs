@@ -14,21 +14,24 @@ namespace pizza_app
         public DataTable HaePizzat()
         {
             // tehdään uusi mysqlcommand. Sulkeiden sisään tulee itse komento ja otaYhteys funktio. MySqlCommand(String, MySqlConnection)
-            MySqlCommand haeKaikki = new MySqlCommand("SELECT pizza FROM pizzat", yhteys.otaYhteys());
+            MySqlCommand haeKaikki = new MySqlCommand("SELECT pizza, hinta FROM pizzat", yhteys.otaYhteys());
 
             MySqlDataAdapter adapter = new MySqlDataAdapter();
             DataTable taulu = new DataTable();
 
+            
+
             adapter.SelectCommand = haeKaikki;
             adapter.Fill(taulu);
 
+            taulu.Columns.Add("pizzahinta", typeof(string), "pizza + ' ' + hinta + '€'");
             return taulu;
         }
 
-        public DataTable HaeTäytteet()
+        public DataTable HaeTaytteet()
         {
             // tehdään uusi mysqlcommand. Sulkeiden sisään tulee itse komento ja otaYhteys funktio. MySqlCommand(String, MySqlConnection)
-            MySqlCommand haeKaikki = new MySqlCommand("SELECT aines FROM ainekset", yhteys.otaYhteys());
+            MySqlCommand haeKaikki = new MySqlCommand("SELECT aines, hinta FROM ainekset", yhteys.otaYhteys());
 
             MySqlDataAdapter adapter = new MySqlDataAdapter();
             DataTable taulu = new DataTable();

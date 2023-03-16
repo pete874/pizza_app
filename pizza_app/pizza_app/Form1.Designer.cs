@@ -34,14 +34,14 @@
             this.VahvistaBT = new System.Windows.Forms.Button();
             this.MaksaBT = new System.Windows.Forms.Button();
             this.TuotteetPN = new System.Windows.Forms.SplitContainer();
-            this.PizzaCB = new System.Windows.Forms.ComboBox();
-            this.TayteCB = new System.Windows.Forms.ComboBox();
             this.LisaaPizzaBT = new System.Windows.Forms.Button();
+            this.PizzaCB = new System.Windows.Forms.ComboBox();
             this.LisaaTayteBT = new System.Windows.Forms.Button();
+            this.TayteCB = new System.Windows.Forms.ComboBox();
             this.FooterPN = new System.Windows.Forms.Panel();
-            this.SummaTitleLB = new System.Windows.Forms.Label();
-            this.SummaLB = new System.Windows.Forms.Label();
             this.VahvistukseenBT = new System.Windows.Forms.Button();
+            this.SummaLB = new System.Windows.Forms.Label();
+            this.SummaTitleLB = new System.Windows.Forms.Label();
             this.HeaderPN.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TuotteetPN)).BeginInit();
             this.TuotteetPN.Panel1.SuspendLayout();
@@ -136,25 +136,6 @@
             this.TuotteetPN.SplitterDistance = 638;
             this.TuotteetPN.TabIndex = 2;
             // 
-            // PizzaCB
-            // 
-            this.PizzaCB.FormattingEnabled = true;
-            this.PizzaCB.Location = new System.Drawing.Point(200, 88);
-            this.PizzaCB.Name = "PizzaCB";
-            this.PizzaCB.Size = new System.Drawing.Size(144, 24);
-            this.PizzaCB.TabIndex = 0;
-            this.PizzaCB.Text = "Valitse pizza...";
-            // 
-            // TayteCB
-            // 
-            this.TayteCB.FormattingEnabled = true;
-            this.TayteCB.Location = new System.Drawing.Point(111, 89);
-            this.TayteCB.Name = "TayteCB";
-            this.TayteCB.Size = new System.Drawing.Size(144, 24);
-            this.TayteCB.TabIndex = 1;
-            this.TayteCB.Text = "Valitse täyte...";
-            this.TayteCB.Visible = false;
-            // 
             // LisaaPizzaBT
             // 
             this.LisaaPizzaBT.Location = new System.Drawing.Point(350, 89);
@@ -163,6 +144,17 @@
             this.LisaaPizzaBT.TabIndex = 1;
             this.LisaaPizzaBT.Text = "Lisää";
             this.LisaaPizzaBT.UseVisualStyleBackColor = true;
+            this.LisaaPizzaBT.Click += new System.EventHandler(this.LisaaPizzaBT_Click);
+            // 
+            // PizzaCB
+            // 
+            this.PizzaCB.FormattingEnabled = true;
+            this.PizzaCB.Location = new System.Drawing.Point(200, 88);
+            this.PizzaCB.Name = "PizzaCB";
+            this.PizzaCB.Size = new System.Drawing.Size(144, 24);
+            this.PizzaCB.TabIndex = 0;
+            this.PizzaCB.Text = "Valitse pizza...";
+            this.PizzaCB.SelectedIndexChanged += new System.EventHandler(this.PizzaCB_SelectedIndexChanged);
             // 
             // LisaaTayteBT
             // 
@@ -173,6 +165,16 @@
             this.LisaaTayteBT.Text = "Lisää";
             this.LisaaTayteBT.UseVisualStyleBackColor = true;
             this.LisaaTayteBT.Visible = false;
+            // 
+            // TayteCB
+            // 
+            this.TayteCB.FormattingEnabled = true;
+            this.TayteCB.Location = new System.Drawing.Point(111, 89);
+            this.TayteCB.Name = "TayteCB";
+            this.TayteCB.Size = new System.Drawing.Size(144, 24);
+            this.TayteCB.TabIndex = 1;
+            this.TayteCB.Text = "Valitse täyte...";
+            this.TayteCB.Visible = false;
             // 
             // FooterPN
             // 
@@ -186,16 +188,14 @@
             this.FooterPN.Size = new System.Drawing.Size(1106, 85);
             this.FooterPN.TabIndex = 3;
             // 
-            // SummaTitleLB
+            // VahvistukseenBT
             // 
-            this.SummaTitleLB.AutoSize = true;
-            this.SummaTitleLB.Font = new System.Drawing.Font("Bahnschrift SemiBold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SummaTitleLB.ForeColor = System.Drawing.SystemColors.Control;
-            this.SummaTitleLB.Location = new System.Drawing.Point(69, 30);
-            this.SummaTitleLB.Name = "SummaTitleLB";
-            this.SummaTitleLB.Size = new System.Drawing.Size(195, 25);
-            this.SummaTitleLB.TabIndex = 0;
-            this.SummaTitleLB.Text = "Ostoskorin summa:";
+            this.VahvistukseenBT.Location = new System.Drawing.Point(995, 25);
+            this.VahvistukseenBT.Name = "VahvistukseenBT";
+            this.VahvistukseenBT.Size = new System.Drawing.Size(86, 42);
+            this.VahvistukseenBT.TabIndex = 2;
+            this.VahvistukseenBT.Text = "Vahvista";
+            this.VahvistukseenBT.UseVisualStyleBackColor = true;
             // 
             // SummaLB
             // 
@@ -208,14 +208,16 @@
             this.SummaLB.TabIndex = 1;
             this.SummaLB.Text = "Summa €";
             // 
-            // VahvistukseenBT
+            // SummaTitleLB
             // 
-            this.VahvistukseenBT.Location = new System.Drawing.Point(995, 25);
-            this.VahvistukseenBT.Name = "VahvistukseenBT";
-            this.VahvistukseenBT.Size = new System.Drawing.Size(86, 42);
-            this.VahvistukseenBT.TabIndex = 2;
-            this.VahvistukseenBT.Text = "Vahvista";
-            this.VahvistukseenBT.UseVisualStyleBackColor = true;
+            this.SummaTitleLB.AutoSize = true;
+            this.SummaTitleLB.Font = new System.Drawing.Font("Bahnschrift SemiBold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SummaTitleLB.ForeColor = System.Drawing.SystemColors.Control;
+            this.SummaTitleLB.Location = new System.Drawing.Point(69, 30);
+            this.SummaTitleLB.Name = "SummaTitleLB";
+            this.SummaTitleLB.Size = new System.Drawing.Size(195, 25);
+            this.SummaTitleLB.TabIndex = 0;
+            this.SummaTitleLB.Text = "Ostoskorin summa:";
             // 
             // PizzaForm
             // 
@@ -229,6 +231,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "PizzaForm";
             this.Text = "Pizza App";
+            this.Load += new System.EventHandler(this.PizzaForm_Load);
             this.HeaderPN.ResumeLayout(false);
             this.HeaderPN.PerformLayout();
             this.TuotteetPN.Panel1.ResumeLayout(false);
