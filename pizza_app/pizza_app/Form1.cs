@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySqlX.XDevAPI.Relational;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -34,6 +35,12 @@ namespace pizza_app
             OstoskoriDG.Columns.Add("Tayte2", "Täyte2");
             OstoskoriDG.Columns.Add("Tayte3", "Täyte3");
             OstoskoriDG.Columns.Add("Tayte4", "Täyte4");
+            OstoskoriDG.Columns.Add("Hinta", "Hinta");
+
+            // Muista muuttaa Visible = false
+            OstoskoriDG.Columns["Hinta"].Visible = true;
+
+
 
         }
 
@@ -55,14 +62,13 @@ namespace pizza_app
             }
         }
 
+        
         public int loppuSumma = 0;
         String tayte1 = "";
         String tayte2 = "";
         String tayte3 = "";
         String tayte4 = "";
-        /*
-        public int labelpoint = 35;
-        */
+
         private void LisaaPizzaBT_Click(object sender, EventArgs e)
         {
             String tuote = PizzaCB.Text.ToString();
@@ -72,7 +78,8 @@ namespace pizza_app
 
             if (tuote == "Oma valinta 10€" && tayte1 != "" || tayte2 != "" || tayte3 != "" || tayte4 != "")
             {
-                OstoskoriDG.Rows.Add(tuote, tayte1, tayte2, tayte3, tayte4);
+
+                OstoskoriDG.Rows.Add(tuote, tayte1, tayte2, tayte3, tayte4, hinta);
                 loppuSumma += hintaInt;
             }
             else if (tuote == "Oma valinta 10€" && tayte1 == "" && tayte2 == "" && tayte3 == "" && tayte4 == "")
@@ -82,7 +89,7 @@ namespace pizza_app
             }
             else
             {
-                OstoskoriDG.Rows.Add(tuote);
+                OstoskoriDG.Rows.Add(tuote, tayte1, tayte2, tayte3, tayte4, hinta);
                 loppuSumma += hintaInt;
             }
             
@@ -92,7 +99,8 @@ namespace pizza_app
 
             /* Vaihtoehto tuotteiden lisäämiseksi Ostoskori paneeliin
              
-            
+            public int labelpoint = 35;
+
             Label tuote1 = new Label();
             labelpoint += 25;
             tuote1.Location = new Point(25, labelpoint);            
@@ -190,8 +198,10 @@ namespace pizza_app
             }
         }
 
+        
         private void OstoskoriPoistaBT_Click(object sender, EventArgs e)
         {
+            
             if (OstoskoriDG.SelectedRows.Count > 0) 
             {
                 foreach (DataGridViewRow row in OstoskoriDG.SelectedRows)
@@ -199,6 +209,9 @@ namespace pizza_app
                     OstoskoriDG.Rows.RemoveAt(row.Index);
                 }
                 
+                
+
+
             }
         }
     }
