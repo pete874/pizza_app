@@ -206,22 +206,33 @@ namespace pizza_app
         
         private void OstoskoriPoistaBT_Click(object sender, EventArgs e)
         {
+            //muuttuja, jolla voimme vähentää poistettujen pizzojen summan kokonaishinnasta
             int poistahinta = 0;
             
+            //jos valitut rivit on isompi kuin nolla, suoritetaan seuraava
             if (OstoskoriDG.SelectedRows.Count > 0) 
             {
+                //Loopataan läpi valitut rivit
                 foreach (DataGridViewRow row in OstoskoriDG.SelectedRows)
                 {
+                    //haetaan valitun tuotteen hinta taulukosta ja muutetaan se int muotoon
                     String tuotehinta = Convert.ToString(OstoskoriDG.SelectedCells[5].Value);
                     int tuotehinta2 = Convert.ToInt32(tuotehinta);
+
+                    //Tässä tehdään itse rivin poisto datagridistä
                     OstoskoriDG.Rows.RemoveAt(row.Index);
+
+                    //lisätään poistahinta muuttujaan valitun tuotteen hinta
                     poistahinta += tuotehinta2;
                 }
+
+                //lopuksi vähennetään poistettujen pizzojen hinta loppusummasta
                 loppuSumma -= poistahinta;
                 
 
 
             }
+            //Päivitetään hinta label vastaamaan loppusummaa
             SummaLB.Text = loppuSumma.ToString() + "€";
 
         }
