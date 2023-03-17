@@ -38,7 +38,7 @@ namespace pizza_app
             OstoskoriDG.Columns.Add("Hinta", "Hinta");
 
             // Muista muuttaa Visible = false
-            OstoskoriDG.Columns["Hinta"].Visible = true;
+            OstoskoriDG.Columns["Hinta"].Visible = false;
 
 
 
@@ -92,7 +92,12 @@ namespace pizza_app
                 OstoskoriDG.Rows.Add(tuote, tayte1, tayte2, tayte3, tayte4, hinta);
                 loppuSumma += hintaInt;
             }
-            
+
+            tayte1 = "";
+            tayte2 = "";
+            tayte3 = "";
+            tayte4 = "";
+
             SummaLB.Text = loppuSumma.ToString() + "€";
 
 
@@ -201,18 +206,24 @@ namespace pizza_app
         
         private void OstoskoriPoistaBT_Click(object sender, EventArgs e)
         {
+            int poistahinta = 0;
             
             if (OstoskoriDG.SelectedRows.Count > 0) 
             {
                 foreach (DataGridViewRow row in OstoskoriDG.SelectedRows)
                 {
+                    String tuotehinta = Convert.ToString(OstoskoriDG.SelectedCells[5].Value);
+                    int tuotehinta2 = Convert.ToInt32(tuotehinta);
                     OstoskoriDG.Rows.RemoveAt(row.Index);
+                    poistahinta += tuotehinta2;
                 }
-                
+                loppuSumma -= poistahinta;
                 
 
 
             }
+            SummaLB.Text = loppuSumma.ToString() + "€";
+
         }
     }
 }
