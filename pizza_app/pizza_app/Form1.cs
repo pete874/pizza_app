@@ -75,7 +75,7 @@ namespace pizza_app
             String hinta = PizzaCB.SelectedValue.ToString();
             int hintaInt = Convert.ToInt16(hinta);
             
-
+            //Varmistetaan if lauseella että tarvittavat tiedot menevät ostoskorin datagridiin ja ettei tyhjää omavalintaa pysty sinne lisäämäään
             if (tuote == "Oma valinta 10€" && tayte1 != "" || tayte2 != "" || tayte3 != "" || tayte4 != "")
             {
 
