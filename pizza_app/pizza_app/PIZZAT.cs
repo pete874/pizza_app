@@ -39,6 +39,8 @@ namespace pizza_app
             adapter.SelectCommand = haeKaikki;
             adapter.Fill(taulu);
 
+            //Haetaan mahdollisesti myös ainesten hinnat esiin. Kommentoidaan toistaiseksi ulos
+            //taulu.Columns.Add("aineshinta", typeof(string), "aines + ' ' + hinta + '€'");
             return taulu;
         }
     }
