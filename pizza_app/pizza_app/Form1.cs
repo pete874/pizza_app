@@ -272,10 +272,31 @@ namespace pizza_app
 
             for (int i = 0; i < OstoskoriDG.Rows.Count; i++)
             {
-                tuotteet += OstoskoriDG.Rows[i].Cells["tuote"].Value + ", ";
+                tuotteet += OstoskoriDG.Rows[i].Cells["tuote"].Value + " " +
+                            OstoskoriDG.Rows[i].Cells["tayte1"].Value + " " +
+                            OstoskoriDG.Rows[i].Cells["tayte2"].Value + " " +
+                            OstoskoriDG.Rows[i].Cells["tayte3"].Value + " " +
+                            OstoskoriDG.Rows[i].Cells["tayte4"].Value + " ";
             }
 
             MessageBox.Show(tuotteet.ToString());
+
+            if (etunimi.Trim().Equals("") || sukunimi.Trim().Equals("") || lahiosoite.Trim().Equals("") || postinumero.Trim().Equals("") || puhelin.Trim().Equals("") || email.Trim().Equals("") || tuotteet.Trim().Equals(""))
+            {
+                MessageBox.Show("Täytä kaikki kentät", "Virhe syötössä", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                Boolean LisaaTilaus = pizzat.LisaaTilaus(etunimi, sukunimi, lahiosoite, postinumero, puhelin, email, tuotteet);
+                if (LisaaTilaus)
+                {
+                    MessageBox.Show("Uusi tilaus lisätty!", "Tilaus", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Uutta tilausta ei pystytty lisäämään.", "Tilaus", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
         private void MaksamaanBT_Click(object sender, EventArgs e)
