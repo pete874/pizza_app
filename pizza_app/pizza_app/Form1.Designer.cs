@@ -57,15 +57,31 @@
             this.LisaaTayteBT = new System.Windows.Forms.Button();
             this.TayteCB = new System.Windows.Forms.ComboBox();
             this.FooterPN = new System.Windows.Forms.Panel();
+            this.TakaisinBT = new System.Windows.Forms.Button();
+            this.MaksamaanBT = new System.Windows.Forms.Button();
             this.OstoskoriinBT = new System.Windows.Forms.Button();
             this.SummaLB = new System.Windows.Forms.Label();
             this.SummaTitleLB = new System.Windows.Forms.Label();
             this.OKoriOtsikko = new System.Windows.Forms.Label();
             this.OstoskoriDG = new System.Windows.Forms.DataGridView();
             this.OstoskoriPN = new System.Windows.Forms.Panel();
-            this.MaksamaanBT = new System.Windows.Forms.Button();
-            this.TakaisinBT = new System.Windows.Forms.Button();
             this.OstoskoriPoistaBT = new System.Windows.Forms.Button();
+            this.MaksaPN = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.EnimiTB = new System.Windows.Forms.TextBox();
+            this.SnimiTB = new System.Windows.Forms.TextBox();
+            this.OsoiteTB = new System.Windows.Forms.TextBox();
+            this.PstNumTB = new System.Windows.Forms.TextBox();
+            this.PuhTB = new System.Windows.Forms.TextBox();
+            this.EmailTB = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.MaksuTapaCB = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.HeaderPN.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TuotteetPN)).BeginInit();
             this.TuotteetPN.Panel1.SuspendLayout();
@@ -74,6 +90,7 @@
             this.FooterPN.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.OstoskoriDG)).BeginInit();
             this.OstoskoriPN.SuspendLayout();
+            this.MaksaPN.SuspendLayout();
             this.SuspendLayout();
             // 
             // HeaderPN
@@ -422,6 +439,27 @@
             this.FooterPN.Size = new System.Drawing.Size(1106, 85);
             this.FooterPN.TabIndex = 3;
             // 
+            // TakaisinBT
+            // 
+            this.TakaisinBT.Location = new System.Drawing.Point(875, 30);
+            this.TakaisinBT.Name = "TakaisinBT";
+            this.TakaisinBT.Size = new System.Drawing.Size(93, 37);
+            this.TakaisinBT.TabIndex = 4;
+            this.TakaisinBT.Text = "Takaisin";
+            this.TakaisinBT.UseVisualStyleBackColor = true;
+            this.TakaisinBT.Visible = false;
+            this.TakaisinBT.Click += new System.EventHandler(this.TakaisinBT_Click);
+            // 
+            // MaksamaanBT
+            // 
+            this.MaksamaanBT.Location = new System.Drawing.Point(988, 30);
+            this.MaksamaanBT.Name = "MaksamaanBT";
+            this.MaksamaanBT.Size = new System.Drawing.Size(93, 37);
+            this.MaksamaanBT.TabIndex = 3;
+            this.MaksamaanBT.Text = "Maksamaan";
+            this.MaksamaanBT.UseVisualStyleBackColor = true;
+            this.MaksamaanBT.Visible = false;
+            // 
             // OstoskoriinBT
             // 
             this.OstoskoriinBT.Location = new System.Drawing.Point(988, 30);
@@ -484,32 +522,11 @@
             this.OstoskoriPN.Controls.Add(this.OstoskoriPoistaBT);
             this.OstoskoriPN.Controls.Add(this.OstoskoriDG);
             this.OstoskoriPN.Controls.Add(this.OKoriOtsikko);
-            this.OstoskoriPN.Location = new System.Drawing.Point(0, 85);
+            this.OstoskoriPN.Location = new System.Drawing.Point(0, 86);
             this.OstoskoriPN.Name = "OstoskoriPN";
-            this.OstoskoriPN.Size = new System.Drawing.Size(1106, 496);
+            this.OstoskoriPN.Size = new System.Drawing.Size(1106, 495);
             this.OstoskoriPN.TabIndex = 12;
             this.OstoskoriPN.Visible = false;
-            // 
-            // MaksamaanBT
-            // 
-            this.MaksamaanBT.Location = new System.Drawing.Point(988, 30);
-            this.MaksamaanBT.Name = "MaksamaanBT";
-            this.MaksamaanBT.Size = new System.Drawing.Size(93, 37);
-            this.MaksamaanBT.TabIndex = 3;
-            this.MaksamaanBT.Text = "Maksamaan";
-            this.MaksamaanBT.UseVisualStyleBackColor = true;
-            this.MaksamaanBT.Visible = false;
-            // 
-            // TakaisinBT
-            // 
-            this.TakaisinBT.Location = new System.Drawing.Point(875, 30);
-            this.TakaisinBT.Name = "TakaisinBT";
-            this.TakaisinBT.Size = new System.Drawing.Size(93, 37);
-            this.TakaisinBT.TabIndex = 4;
-            this.TakaisinBT.Text = "Takaisin";
-            this.TakaisinBT.UseVisualStyleBackColor = true;
-            this.TakaisinBT.Visible = false;
-            this.TakaisinBT.Click += new System.EventHandler(this.TakaisinBT_Click);
             // 
             // OstoskoriPoistaBT
             // 
@@ -521,12 +538,163 @@
             this.OstoskoriPoistaBT.UseVisualStyleBackColor = true;
             this.OstoskoriPoistaBT.Click += new System.EventHandler(this.OstoskoriPoistaBT_Click);
             // 
+            // MaksaPN
+            // 
+            this.MaksaPN.Controls.Add(this.button1);
+            this.MaksaPN.Controls.Add(this.MaksuTapaCB);
+            this.MaksaPN.Controls.Add(this.label17);
+            this.MaksaPN.Controls.Add(this.EmailTB);
+            this.MaksaPN.Controls.Add(this.PuhTB);
+            this.MaksaPN.Controls.Add(this.PstNumTB);
+            this.MaksaPN.Controls.Add(this.OsoiteTB);
+            this.MaksaPN.Controls.Add(this.SnimiTB);
+            this.MaksaPN.Controls.Add(this.EnimiTB);
+            this.MaksaPN.Controls.Add(this.label16);
+            this.MaksaPN.Controls.Add(this.label15);
+            this.MaksaPN.Controls.Add(this.label14);
+            this.MaksaPN.Controls.Add(this.label13);
+            this.MaksaPN.Controls.Add(this.label12);
+            this.MaksaPN.Controls.Add(this.label11);
+            this.MaksaPN.Location = new System.Drawing.Point(0, 86);
+            this.MaksaPN.Name = "MaksaPN";
+            this.MaksaPN.Size = new System.Drawing.Size(1106, 495);
+            this.MaksaPN.TabIndex = 3;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(381, 141);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(53, 16);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "Etunimi:";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(381, 175);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(64, 16);
+            this.label12.TabIndex = 1;
+            this.label12.Text = "Sukunimi:";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(381, 207);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(72, 16);
+            this.label13.TabIndex = 2;
+            this.label13.Text = "Lähiosoite:";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(381, 242);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(85, 16);
+            this.label14.TabIndex = 3;
+            this.label14.Text = "Postinumero:";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(381, 278);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(99, 16);
+            this.label15.TabIndex = 4;
+            this.label15.Text = "Puhelinnumero:";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(381, 313);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(78, 16);
+            this.label16.TabIndex = 5;
+            this.label16.Text = "Sähköposti:";
+            // 
+            // EnimiTB
+            // 
+            this.EnimiTB.Location = new System.Drawing.Point(482, 138);
+            this.EnimiTB.Name = "EnimiTB";
+            this.EnimiTB.Size = new System.Drawing.Size(201, 22);
+            this.EnimiTB.TabIndex = 6;
+            // 
+            // SnimiTB
+            // 
+            this.SnimiTB.Location = new System.Drawing.Point(482, 172);
+            this.SnimiTB.Name = "SnimiTB";
+            this.SnimiTB.Size = new System.Drawing.Size(201, 22);
+            this.SnimiTB.TabIndex = 7;
+            // 
+            // OsoiteTB
+            // 
+            this.OsoiteTB.Location = new System.Drawing.Point(483, 204);
+            this.OsoiteTB.Name = "OsoiteTB";
+            this.OsoiteTB.Size = new System.Drawing.Size(201, 22);
+            this.OsoiteTB.TabIndex = 8;
+            // 
+            // PstNumTB
+            // 
+            this.PstNumTB.Location = new System.Drawing.Point(482, 239);
+            this.PstNumTB.Name = "PstNumTB";
+            this.PstNumTB.Size = new System.Drawing.Size(201, 22);
+            this.PstNumTB.TabIndex = 9;
+            // 
+            // PuhTB
+            // 
+            this.PuhTB.Location = new System.Drawing.Point(482, 275);
+            this.PuhTB.Name = "PuhTB";
+            this.PuhTB.Size = new System.Drawing.Size(201, 22);
+            this.PuhTB.TabIndex = 10;
+            // 
+            // EmailTB
+            // 
+            this.EmailTB.Location = new System.Drawing.Point(482, 310);
+            this.EmailTB.Name = "EmailTB";
+            this.EmailTB.Size = new System.Drawing.Size(201, 22);
+            this.EmailTB.TabIndex = 11;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Bahnschrift SemiBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(370, 82);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(338, 29);
+            this.label17.TabIndex = 12;
+            this.label17.Text = "Ole hyvä ja täytä kaikki kentät:";
+            // 
+            // MaksuTapaCB
+            // 
+            this.MaksuTapaCB.FormattingEnabled = true;
+            this.MaksuTapaCB.Items.AddRange(new object[] {
+            "Verkkopankki",
+            "Pankkikortti",
+            "Käteinen toimitettaessa"});
+            this.MaksuTapaCB.Location = new System.Drawing.Point(483, 358);
+            this.MaksuTapaCB.Name = "MaksuTapaCB";
+            this.MaksuTapaCB.Size = new System.Drawing.Size(200, 24);
+            this.MaksuTapaCB.TabIndex = 14;
+            this.MaksuTapaCB.Text = "Valitse maksutapa...";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(513, 418);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(122, 38);
+            this.button1.TabIndex = 15;
+            this.button1.Text = "Maksa tilaus";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // PizzaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Beige;
             this.ClientSize = new System.Drawing.Size(1106, 664);
+            this.Controls.Add(this.MaksaPN);
             this.Controls.Add(this.OstoskoriPN);
             this.Controls.Add(this.FooterPN);
             this.Controls.Add(this.HeaderPN);
@@ -549,6 +717,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.OstoskoriDG)).EndInit();
             this.OstoskoriPN.ResumeLayout(false);
             this.OstoskoriPN.PerformLayout();
+            this.MaksaPN.ResumeLayout(false);
+            this.MaksaPN.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -592,6 +762,22 @@
         private System.Windows.Forms.Button MaksamaanBT;
         private System.Windows.Forms.Button TakaisinBT;
         private System.Windows.Forms.Button OstoskoriPoistaBT;
+        private System.Windows.Forms.Panel MaksaPN;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox MaksuTapaCB;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox EmailTB;
+        private System.Windows.Forms.TextBox PuhTB;
+        private System.Windows.Forms.TextBox PstNumTB;
+        private System.Windows.Forms.TextBox OsoiteTB;
+        private System.Windows.Forms.TextBox SnimiTB;
+        private System.Windows.Forms.TextBox EnimiTB;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
     }
 }
 
