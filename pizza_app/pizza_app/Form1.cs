@@ -40,7 +40,7 @@ namespace pizza_app
             // Muista muuttaa Visible = false
             OstoskoriDG.Columns["Hinta"].Visible = false;
 
-
+           
 
         }
 
@@ -185,6 +185,7 @@ namespace pizza_app
             OstoskoriPN.Visible = true;
             MaksamaanBT.Visible = true;
             TakaisinBT.Visible = true;
+            TuotteetPN.Visible = false;
         }
 
         private void TuotteetBT_Click(object sender, EventArgs e)
@@ -194,13 +195,35 @@ namespace pizza_app
 
         private void TakaisinBT_Click(object sender, EventArgs e)
         {
-            if (OstoskoriPN.Visible == true)
+            if (TuotteetPN.Visible == true)
             {
                 OstoskoriPN.Visible = false;
                 TuotteetPN.Visible = true;
                 MaksamaanBT.Visible = false;
                 TakaisinBT.Visible = false;
+                MaksaPN.Visible = false;
             }
+
+            if (OstoskoriPN.Visible == true)
+            {
+                MaksamaanBT.Visible = false;
+                MaksaPN.Visible = false;
+                TakaisinBT.Visible = false;
+                OstoskoriinBT.Visible = true;
+                TuotteetPN.Visible = true;
+                OstoskoriPN.Visible = false;
+            }
+
+            if (MaksaPN.Visible == true)
+            {
+                OstoskoriPN.Visible = true;
+                TuotteetPN.Visible = false;
+                MaksamaanBT.Visible = true;
+                TakaisinBT.Visible = true;
+                MaksaPN.Visible = false;
+                OstoskoriinBT.Visible = false;
+            }
+
         }
 
         
@@ -234,6 +257,34 @@ namespace pizza_app
             }
             //Päivitetään hinta label vastaamaan loppusummaa
             SummaLB.Text = loppuSumma.ToString() + "€";
+
+        }
+
+        private void MaksaTilausBT_Click(object sender, EventArgs e)
+        {
+            String etunimi = EnimiTB.Text;
+            String sukunimi = SnimiTB.Text;
+            String lahiosoite = OsoiteTB.Text;
+            String postinumero = PstNumTB.Text;
+            String puhelin = PuhTB.Text;
+            String email = EmailTB.Text;
+            String tuotteet = "";
+
+            for (int i = 0; i < OstoskoriDG.Rows.Count; i++)
+            {
+                tuotteet += OstoskoriDG.Rows[i].Cells["tuote"].Value + ", ";
+            }
+
+            MessageBox.Show(tuotteet.ToString());
+        }
+
+        private void MaksamaanBT_Click(object sender, EventArgs e)
+        {
+
+            MaksaPN.Visible = true;
+            MaksamaanBT.Visible = false;
+            OstoskoriinBT.Visible = false;
+            OstoskoriPN.Visible = false;
 
         }
     }
