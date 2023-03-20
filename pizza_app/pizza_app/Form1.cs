@@ -22,6 +22,7 @@ namespace pizza_app
 
         private void PizzaForm_Load(object sender, EventArgs e)
         {
+            //haetaan comboboxeihin tuotteita ja aineksia tietokannasta
             PizzaCB.DataSource = pizzat.HaePizzat();
             PizzaCB.DisplayMember = "pizzahinta";
             PizzaCB.ValueMember = "hinta";
@@ -30,6 +31,7 @@ namespace pizza_app
             TayteCB.DisplayMember = "aines";
             TayteCB.ValueMember = "hinta";
 
+            //ostoskorin datagridiin sarakkeet
             OstoskoriDG.Columns.Add("Tuote", "Tuote");
             OstoskoriDG.Columns.Add("Tayte1", "Täyte1");
             OstoskoriDG.Columns.Add("Tayte2", "Täyte2");
@@ -44,12 +46,13 @@ namespace pizza_app
 
         }
 
+
         private void PizzaCB_SelectedIndexChanged(object sender, EventArgs e)
         {
             
             String pizza = PizzaCB.Text.ToString();
 
-            
+            //jos omavalinta valitaan, laitetaan täytteiden valinta näkyville
             if (pizza == "Oma valinta 10€")
             {
                 TayteCB.Visible = true;
@@ -62,7 +65,7 @@ namespace pizza_app
             }
         }
 
-        
+        //muuttujat loppusummalle ja täytteille
         public int loppuSumma = 0;
         String tayte1 = "";
         String tayte2 = "";
@@ -78,8 +81,10 @@ namespace pizza_app
             //Varmistetaan if lauseella että tarvittavat tiedot menevät ostoskorin datagridiin ja ettei tyhjää omavalintaa pysty sinne lisäämäään
             if (tuote == "Oma valinta 10€" && tayte1 != "" || tayte2 != "" || tayte3 != "" || tayte4 != "")
             {
-
+                //lisätään ostoskoriin tuotteet,täytteet ja hinta, kun painetaan lisää-nappia
                 OstoskoriDG.Rows.Add(tuote, tayte1, tayte2, tayte3, tayte4, hinta);
+
+                //lisätään lopulliseen hintaan valitun pizzan hinta
                 loppuSumma += hintaInt;
 
                 Tayte1LB.Visible = false;
@@ -92,6 +97,8 @@ namespace pizza_app
                 PTayte3BT.Visible = false;
                 PTayte4BT.Visible = false;
             }
+
+            //tarkastus, jotta oma valintaista pizzaa ei pysty lisäämään ilman yhtäkään täytettä
             else if (tuote == "Oma valinta 10€" && tayte1 == "" && tayte2 == "" && tayte3 == "" && tayte4 == "")
             {
                 MessageBox.Show("Valitse vähintään yksi täyte.", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -112,7 +119,7 @@ namespace pizza_app
 
 
 
-
+            //lopuksi päivitetään lopullisen summan teksti vastaamaan loppuSumma muuttujaa
             SummaLB.Text = loppuSumma.ToString() + "€";
 
 
@@ -129,6 +136,7 @@ namespace pizza_app
             */
         }
 
+        //maksimissaan neljän täytteen lisääminen omavalintaan
         private void LisaaTayteBT_Click(object sender, EventArgs e)
         {
             if (Tayte1LB.Visible == false)
@@ -163,6 +171,7 @@ namespace pizza_app
 
         }
 
+        //täytteiden poistonappien toiminnallisuus
         private void PTayte1BT_Click(object sender, EventArgs e)
         {
             Tayte1LB.Text = "";
@@ -204,7 +213,7 @@ namespace pizza_app
         }
 
 
-
+        //välilehtien takaisin-napin toiminnallisuus
         private void TakaisinBT_Click(object sender, EventArgs e)
         {
             if (TuotteetPN.Visible == true)
@@ -272,6 +281,7 @@ namespace pizza_app
 
         }
 
+        //tilauksen maksu ja lisäys tietokantaan, josta tilauksen ovat mahdollista saada keittiön puolelle haettua tietokannasta
         private void MaksaTilausBT_Click(object sender, EventArgs e)
         {
             String etunimi = EnimiTB.Text;
