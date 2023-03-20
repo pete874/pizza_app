@@ -81,6 +81,16 @@ namespace pizza_app
 
                 OstoskoriDG.Rows.Add(tuote, tayte1, tayte2, tayte3, tayte4, hinta);
                 loppuSumma += hintaInt;
+
+                Tayte1LB.Visible = false;
+                Tayte2LB.Visible = false;
+                Tayte3LB.Visible = false;
+                Tayte4LB.Visible = false;
+
+                PTayte1BT.Visible = false;
+                PTayte2BT.Visible = false;
+                PTayte3BT.Visible = false;
+                PTayte4BT.Visible = false;
             }
             else if (tuote == "Oma valinta 10€" && tayte1 == "" && tayte2 == "" && tayte3 == "" && tayte4 == "")
             {
@@ -97,6 +107,11 @@ namespace pizza_app
             tayte2 = "";
             tayte3 = "";
             tayte4 = "";
+
+
+
+
+
 
             SummaLB.Text = loppuSumma.ToString() + "€";
 
