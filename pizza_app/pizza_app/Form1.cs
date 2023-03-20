@@ -188,10 +188,7 @@ namespace pizza_app
             TuotteetPN.Visible = false;
         }
 
-        private void TuotteetBT_Click(object sender, EventArgs e)
-        {
-            OstoskoriPN.Visible = false;
-        }
+
 
         private void TakaisinBT_Click(object sender, EventArgs e)
         {

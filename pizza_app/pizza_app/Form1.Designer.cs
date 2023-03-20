@@ -121,7 +121,6 @@
             this.TuotteetBT.TabIndex = 0;
             this.TuotteetBT.Text = "Tuotteet";
             this.TuotteetBT.UseVisualStyleBackColor = false;
-            this.TuotteetBT.Click += new System.EventHandler(this.TuotteetBT_Click);
             // 
             // HeaderLB
             // 
