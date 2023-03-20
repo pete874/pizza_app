@@ -117,4 +117,31 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="richTextBox1.Text" xml:space="preserve">
+    <value>Oma valinta              10€
+- valitse enintään 4 täytettä
+
+Americana                 8€
+- juusto, kinkku, ananas, Aura-sinihomejuusto
+
+Margarita                 10€
+- juusto, lisäjuusto
+
+Mexicana                 10€
+- mexicana-kastike, juusto, pepperonimakkara, ananas, jalapeno
+
+Quatrro Stagioni      11€
+- juusto, tonnikala, kinkku, herkkusieni, katkarapu
+
+Frutti Di Mare           9€
+- tonnikala, simpukka, katkarapu
+
+Synttäripizza            11€
+- kinkku, salami, pekoni, kananmuna, smetana
+
+Special smetana       11€
+- kebabliha, smetana, sipuli, chili, feta
+
+</value>
+  </data>
 </root>

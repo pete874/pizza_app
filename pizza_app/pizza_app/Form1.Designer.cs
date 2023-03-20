@@ -28,22 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PizzaForm));
             this.HeaderPN = new System.Windows.Forms.Panel();
-            this.TuotteetBT = new System.Windows.Forms.Button();
             this.HeaderLB = new System.Windows.Forms.Label();
-            this.OstoskoriBT = new System.Windows.Forms.Button();
-            this.MaksaBT = new System.Windows.Forms.Button();
             this.TuotteetPN = new System.Windows.Forms.SplitContainer();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.LisaaPizzaBT = new System.Windows.Forms.Button();
             this.PizzaCB = new System.Windows.Forms.ComboBox();
             this.PTayte3BT = new System.Windows.Forms.Button();
@@ -82,6 +74,14 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.HeaderPN.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TuotteetPN)).BeginInit();
             this.TuotteetPN.Panel1.SuspendLayout();
@@ -91,15 +91,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.OstoskoriDG)).BeginInit();
             this.OstoskoriPN.SuspendLayout();
             this.MaksaPN.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // HeaderPN
             // 
             this.HeaderPN.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.HeaderPN.Controls.Add(this.TuotteetBT);
+            this.HeaderPN.Controls.Add(this.label20);
+            this.HeaderPN.Controls.Add(this.label19);
+            this.HeaderPN.Controls.Add(this.label18);
             this.HeaderPN.Controls.Add(this.HeaderLB);
-            this.HeaderPN.Controls.Add(this.OstoskoriBT);
-            this.HeaderPN.Controls.Add(this.MaksaBT);
             this.HeaderPN.Dock = System.Windows.Forms.DockStyle.Top;
             this.HeaderPN.ForeColor = System.Drawing.SystemColors.ControlText;
             this.HeaderPN.Location = new System.Drawing.Point(0, 0);
@@ -108,81 +110,34 @@
             this.HeaderPN.Size = new System.Drawing.Size(1106, 87);
             this.HeaderPN.TabIndex = 1;
             // 
-            // TuotteetBT
-            // 
-            this.TuotteetBT.BackColor = System.Drawing.Color.Beige;
-            this.TuotteetBT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.TuotteetBT.Font = new System.Drawing.Font("Bahnschrift SemiBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TuotteetBT.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.TuotteetBT.Location = new System.Drawing.Point(207, 36);
-            this.TuotteetBT.Margin = new System.Windows.Forms.Padding(4);
-            this.TuotteetBT.Name = "TuotteetBT";
-            this.TuotteetBT.Size = new System.Drawing.Size(147, 28);
-            this.TuotteetBT.TabIndex = 0;
-            this.TuotteetBT.Text = "Tuotteet";
-            this.TuotteetBT.UseVisualStyleBackColor = false;
-            // 
             // HeaderLB
             // 
             this.HeaderLB.AutoSize = true;
-            this.HeaderLB.Font = new System.Drawing.Font("Bahnschrift SemiBold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HeaderLB.Font = new System.Drawing.Font("Bahnschrift SemiBold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HeaderLB.ForeColor = System.Drawing.Color.PaleGreen;
-            this.HeaderLB.Location = new System.Drawing.Point(13, 22);
+            this.HeaderLB.Location = new System.Drawing.Point(12, 9);
             this.HeaderLB.Name = "HeaderLB";
-            this.HeaderLB.Size = new System.Drawing.Size(133, 33);
+            this.HeaderLB.Size = new System.Drawing.Size(158, 39);
             this.HeaderLB.TabIndex = 3;
             this.HeaderLB.Text = "Pizza App";
             // 
-            // OstoskoriBT
-            // 
-            this.OstoskoriBT.BackColor = System.Drawing.Color.Beige;
-            this.OstoskoriBT.Font = new System.Drawing.Font("Bahnschrift SemiBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OstoskoriBT.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.OstoskoriBT.Location = new System.Drawing.Point(477, 36);
-            this.OstoskoriBT.Margin = new System.Windows.Forms.Padding(4);
-            this.OstoskoriBT.Name = "OstoskoriBT";
-            this.OstoskoriBT.Size = new System.Drawing.Size(146, 28);
-            this.OstoskoriBT.TabIndex = 1;
-            this.OstoskoriBT.Text = "Ostoskori";
-            this.OstoskoriBT.UseVisualStyleBackColor = false;
-            // 
-            // MaksaBT
-            // 
-            this.MaksaBT.BackColor = System.Drawing.Color.Beige;
-            this.MaksaBT.Font = new System.Drawing.Font("Bahnschrift SemiBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MaksaBT.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.MaksaBT.Location = new System.Drawing.Point(748, 36);
-            this.MaksaBT.Margin = new System.Windows.Forms.Padding(4);
-            this.MaksaBT.Name = "MaksaBT";
-            this.MaksaBT.Size = new System.Drawing.Size(139, 28);
-            this.MaksaBT.TabIndex = 2;
-            this.MaksaBT.Text = "Maksa tilaus";
-            this.MaksaBT.UseVisualStyleBackColor = false;
-            // 
             // TuotteetPN
             // 
-            this.TuotteetPN.Location = new System.Drawing.Point(0, 71);
+            this.TuotteetPN.Location = new System.Drawing.Point(0, 86);
             this.TuotteetPN.Name = "TuotteetPN";
             // 
             // TuotteetPN.Panel1
             // 
             this.TuotteetPN.Panel1.BackColor = System.Drawing.Color.Beige;
-            this.TuotteetPN.Panel1.Controls.Add(this.label6);
-            this.TuotteetPN.Panel1.Controls.Add(this.label7);
-            this.TuotteetPN.Panel1.Controls.Add(this.label8);
-            this.TuotteetPN.Panel1.Controls.Add(this.label9);
-            this.TuotteetPN.Panel1.Controls.Add(this.label10);
-            this.TuotteetPN.Panel1.Controls.Add(this.label5);
-            this.TuotteetPN.Panel1.Controls.Add(this.label4);
-            this.TuotteetPN.Panel1.Controls.Add(this.label3);
-            this.TuotteetPN.Panel1.Controls.Add(this.label2);
             this.TuotteetPN.Panel1.Controls.Add(this.label1);
+            this.TuotteetPN.Panel1.Controls.Add(this.richTextBox1);
             this.TuotteetPN.Panel1.Controls.Add(this.LisaaPizzaBT);
             this.TuotteetPN.Panel1.Controls.Add(this.PizzaCB);
             // 
             // TuotteetPN.Panel2
             // 
             this.TuotteetPN.Panel2.BackColor = System.Drawing.Color.Beige;
+            this.TuotteetPN.Panel2.Controls.Add(this.label2);
             this.TuotteetPN.Panel2.Controls.Add(this.PTayte3BT);
             this.TuotteetPN.Panel2.Controls.Add(this.PTayte1BT);
             this.TuotteetPN.Panel2.Controls.Add(this.PTayte4BT);
@@ -193,114 +148,33 @@
             this.TuotteetPN.Panel2.Controls.Add(this.Tayte1LB);
             this.TuotteetPN.Panel2.Controls.Add(this.LisaaTayteBT);
             this.TuotteetPN.Panel2.Controls.Add(this.TayteCB);
-            this.TuotteetPN.Size = new System.Drawing.Size(1106, 510);
+            this.TuotteetPN.Size = new System.Drawing.Size(1106, 495);
             this.TuotteetPN.SplitterDistance = 638;
             this.TuotteetPN.TabIndex = 2;
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(399, 361);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(28, 16);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "11€";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(399, 306);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(28, 16);
-            this.label7.TabIndex = 10;
-            this.label7.Text = "10€";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(399, 252);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(28, 16);
-            this.label8.TabIndex = 9;
-            this.label8.Text = "10€";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(399, 199);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(28, 16);
-            this.label9.TabIndex = 8;
-            this.label9.Text = "10€";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(399, 146);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(21, 16);
-            this.label10.TabIndex = 7;
-            this.label10.Text = "8€";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(197, 361);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(78, 16);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Oma valinta";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(197, 306);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(102, 16);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Quattro Stagioni";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(197, 252);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 16);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Mexicana";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(197, 199);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 16);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Margarita";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(197, 146);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 16);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Americana";
-            // 
             // LisaaPizzaBT
             // 
-            this.LisaaPizzaBT.Location = new System.Drawing.Point(350, 89);
+            this.LisaaPizzaBT.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.LisaaPizzaBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LisaaPizzaBT.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LisaaPizzaBT.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.LisaaPizzaBT.Location = new System.Drawing.Point(350, 82);
             this.LisaaPizzaBT.Name = "LisaaPizzaBT";
-            this.LisaaPizzaBT.Size = new System.Drawing.Size(77, 23);
+            this.LisaaPizzaBT.Size = new System.Drawing.Size(103, 24);
             this.LisaaPizzaBT.TabIndex = 1;
             this.LisaaPizzaBT.Text = "Lisää";
-            this.LisaaPizzaBT.UseVisualStyleBackColor = true;
+            this.LisaaPizzaBT.UseVisualStyleBackColor = false;
             this.LisaaPizzaBT.Click += new System.EventHandler(this.LisaaPizzaBT_Click);
             // 
             // PizzaCB
             // 
+            this.PizzaCB.BackColor = System.Drawing.SystemColors.Window;
+            this.PizzaCB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PizzaCB.FormattingEnabled = true;
-            this.PizzaCB.Location = new System.Drawing.Point(200, 88);
+            this.PizzaCB.ItemHeight = 16;
+            this.PizzaCB.Items.AddRange(new object[] {
+            "Valitse pizza..."});
+            this.PizzaCB.Location = new System.Drawing.Point(200, 82);
             this.PizzaCB.Name = "PizzaCB";
             this.PizzaCB.Size = new System.Drawing.Size(144, 24);
             this.PizzaCB.TabIndex = 0;
@@ -312,7 +186,7 @@
             this.PTayte3BT.BackColor = System.Drawing.Color.IndianRed;
             this.PTayte3BT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PTayte3BT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PTayte3BT.Location = new System.Drawing.Point(310, 195);
+            this.PTayte3BT.Location = new System.Drawing.Point(310, 204);
             this.PTayte3BT.Name = "PTayte3BT";
             this.PTayte3BT.Size = new System.Drawing.Size(26, 28);
             this.PTayte3BT.TabIndex = 10;
@@ -326,7 +200,7 @@
             this.PTayte1BT.BackColor = System.Drawing.Color.IndianRed;
             this.PTayte1BT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PTayte1BT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PTayte1BT.Location = new System.Drawing.Point(310, 124);
+            this.PTayte1BT.Location = new System.Drawing.Point(310, 133);
             this.PTayte1BT.Name = "PTayte1BT";
             this.PTayte1BT.Size = new System.Drawing.Size(26, 28);
             this.PTayte1BT.TabIndex = 9;
@@ -340,7 +214,7 @@
             this.PTayte4BT.BackColor = System.Drawing.Color.IndianRed;
             this.PTayte4BT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PTayte4BT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PTayte4BT.Location = new System.Drawing.Point(310, 230);
+            this.PTayte4BT.Location = new System.Drawing.Point(310, 239);
             this.PTayte4BT.Name = "PTayte4BT";
             this.PTayte4BT.Size = new System.Drawing.Size(26, 28);
             this.PTayte4BT.TabIndex = 8;
@@ -354,7 +228,7 @@
             this.PTayte2BT.BackColor = System.Drawing.Color.IndianRed;
             this.PTayte2BT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PTayte2BT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PTayte2BT.Location = new System.Drawing.Point(310, 159);
+            this.PTayte2BT.Location = new System.Drawing.Point(310, 168);
             this.PTayte2BT.Name = "PTayte2BT";
             this.PTayte2BT.Size = new System.Drawing.Size(26, 28);
             this.PTayte2BT.TabIndex = 7;
@@ -366,9 +240,10 @@
             // Tayte4LB
             // 
             this.Tayte4LB.AutoSize = true;
+            this.Tayte4LB.Font = new System.Drawing.Font("Baskerville Old Face", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Tayte4LB.Location = new System.Drawing.Point(108, 242);
             this.Tayte4LB.Name = "Tayte4LB";
-            this.Tayte4LB.Size = new System.Drawing.Size(49, 16);
+            this.Tayte4LB.Size = new System.Drawing.Size(62, 22);
             this.Tayte4LB.TabIndex = 6;
             this.Tayte4LB.Text = "Täyte4";
             this.Tayte4LB.Visible = false;
@@ -376,9 +251,10 @@
             // Tayte3LB
             // 
             this.Tayte3LB.AutoSize = true;
+            this.Tayte3LB.Font = new System.Drawing.Font("Baskerville Old Face", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Tayte3LB.Location = new System.Drawing.Point(108, 208);
             this.Tayte3LB.Name = "Tayte3LB";
-            this.Tayte3LB.Size = new System.Drawing.Size(49, 16);
+            this.Tayte3LB.Size = new System.Drawing.Size(62, 22);
             this.Tayte3LB.TabIndex = 5;
             this.Tayte3LB.Text = "Täyte3";
             this.Tayte3LB.Visible = false;
@@ -386,9 +262,10 @@
             // Tayte2LB
             // 
             this.Tayte2LB.AutoSize = true;
+            this.Tayte2LB.Font = new System.Drawing.Font("Baskerville Old Face", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Tayte2LB.Location = new System.Drawing.Point(108, 172);
             this.Tayte2LB.Name = "Tayte2LB";
-            this.Tayte2LB.Size = new System.Drawing.Size(49, 16);
+            this.Tayte2LB.Size = new System.Drawing.Size(62, 22);
             this.Tayte2LB.TabIndex = 4;
             this.Tayte2LB.Text = "Täyte2";
             this.Tayte2LB.Visible = false;
@@ -396,27 +273,34 @@
             // Tayte1LB
             // 
             this.Tayte1LB.AutoSize = true;
+            this.Tayte1LB.Font = new System.Drawing.Font("Baskerville Old Face", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Tayte1LB.Location = new System.Drawing.Point(108, 137);
             this.Tayte1LB.Name = "Tayte1LB";
-            this.Tayte1LB.Size = new System.Drawing.Size(49, 16);
+            this.Tayte1LB.Size = new System.Drawing.Size(62, 22);
             this.Tayte1LB.TabIndex = 3;
             this.Tayte1LB.Text = "Täyte1";
             this.Tayte1LB.Visible = false;
             // 
             // LisaaTayteBT
             // 
+            this.LisaaTayteBT.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.LisaaTayteBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LisaaTayteBT.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LisaaTayteBT.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.LisaaTayteBT.Location = new System.Drawing.Point(261, 89);
             this.LisaaTayteBT.Name = "LisaaTayteBT";
-            this.LisaaTayteBT.Size = new System.Drawing.Size(75, 23);
+            this.LisaaTayteBT.Size = new System.Drawing.Size(103, 24);
             this.LisaaTayteBT.TabIndex = 2;
             this.LisaaTayteBT.Text = "Lisää";
-            this.LisaaTayteBT.UseVisualStyleBackColor = true;
+            this.LisaaTayteBT.UseVisualStyleBackColor = false;
             this.LisaaTayteBT.Visible = false;
             this.LisaaTayteBT.Click += new System.EventHandler(this.LisaaTayteBT_Click);
             // 
             // TayteCB
             // 
+            this.TayteCB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.TayteCB.FormattingEnabled = true;
+            this.TayteCB.ItemHeight = 16;
             this.TayteCB.Location = new System.Drawing.Point(111, 89);
             this.TayteCB.Name = "TayteCB";
             this.TayteCB.Size = new System.Drawing.Size(144, 24);
@@ -440,40 +324,50 @@
             // 
             // TakaisinBT
             // 
-            this.TakaisinBT.Location = new System.Drawing.Point(875, 30);
+            this.TakaisinBT.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.TakaisinBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.TakaisinBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TakaisinBT.Location = new System.Drawing.Point(872, 30);
             this.TakaisinBT.Name = "TakaisinBT";
-            this.TakaisinBT.Size = new System.Drawing.Size(93, 37);
+            this.TakaisinBT.Size = new System.Drawing.Size(106, 37);
             this.TakaisinBT.TabIndex = 4;
             this.TakaisinBT.Text = "Takaisin";
-            this.TakaisinBT.UseVisualStyleBackColor = true;
+            this.TakaisinBT.UseVisualStyleBackColor = false;
             this.TakaisinBT.Visible = false;
             this.TakaisinBT.Click += new System.EventHandler(this.TakaisinBT_Click);
             // 
             // MaksamaanBT
             // 
+            this.MaksamaanBT.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.MaksamaanBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MaksamaanBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaksamaanBT.ForeColor = System.Drawing.SystemColors.ControlText;
             this.MaksamaanBT.Location = new System.Drawing.Point(988, 30);
             this.MaksamaanBT.Name = "MaksamaanBT";
-            this.MaksamaanBT.Size = new System.Drawing.Size(93, 37);
+            this.MaksamaanBT.Size = new System.Drawing.Size(106, 37);
             this.MaksamaanBT.TabIndex = 3;
             this.MaksamaanBT.Text = "Maksamaan";
-            this.MaksamaanBT.UseVisualStyleBackColor = true;
+            this.MaksamaanBT.UseVisualStyleBackColor = false;
             this.MaksamaanBT.Visible = false;
             this.MaksamaanBT.Click += new System.EventHandler(this.MaksamaanBT_Click);
             // 
             // OstoskoriinBT
             // 
-            this.OstoskoriinBT.Location = new System.Drawing.Point(988, 30);
+            this.OstoskoriinBT.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.OstoskoriinBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.OstoskoriinBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OstoskoriinBT.Location = new System.Drawing.Point(988, 32);
             this.OstoskoriinBT.Name = "OstoskoriinBT";
-            this.OstoskoriinBT.Size = new System.Drawing.Size(93, 37);
+            this.OstoskoriinBT.Size = new System.Drawing.Size(106, 35);
             this.OstoskoriinBT.TabIndex = 2;
             this.OstoskoriinBT.Text = "Ostoskoriin";
-            this.OstoskoriinBT.UseVisualStyleBackColor = true;
+            this.OstoskoriinBT.UseVisualStyleBackColor = false;
             this.OstoskoriinBT.Click += new System.EventHandler(this.OstoskoriinBT_Click);
             // 
             // SummaLB
             // 
             this.SummaLB.AutoSize = true;
-            this.SummaLB.BackColor = System.Drawing.SystemColors.Control;
+            this.SummaLB.BackColor = System.Drawing.Color.LightBlue;
             this.SummaLB.Font = new System.Drawing.Font("Bahnschrift SemiBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SummaLB.Location = new System.Drawing.Point(270, 32);
             this.SummaLB.Name = "SummaLB";
@@ -485,7 +379,7 @@
             // 
             this.SummaTitleLB.AutoSize = true;
             this.SummaTitleLB.Font = new System.Drawing.Font("Bahnschrift SemiBold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SummaTitleLB.ForeColor = System.Drawing.SystemColors.Control;
+            this.SummaTitleLB.ForeColor = System.Drawing.Color.MediumAquamarine;
             this.SummaTitleLB.Location = new System.Drawing.Point(69, 30);
             this.SummaTitleLB.Name = "SummaTitleLB";
             this.SummaTitleLB.Size = new System.Drawing.Size(195, 25);
@@ -496,24 +390,50 @@
             // 
             this.OKoriOtsikko.AutoSize = true;
             this.OKoriOtsikko.Font = new System.Drawing.Font("Bahnschrift SemiBold", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OKoriOtsikko.Location = new System.Drawing.Point(395, 28);
+            this.OKoriOtsikko.Location = new System.Drawing.Point(251, 74);
             this.OKoriOtsikko.Name = "OKoriOtsikko";
-            this.OKoriOtsikko.Size = new System.Drawing.Size(302, 42);
+            this.OKoriOtsikko.Padding = new System.Windows.Forms.Padding(153, 0, 150, 10);
+            this.OKoriOtsikko.Size = new System.Drawing.Size(605, 52);
             this.OKoriOtsikko.TabIndex = 0;
             this.OKoriOtsikko.Text = "Ostoskorin sisältö";
             // 
             // OstoskoriDG
             // 
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Beige;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OstoskoriDG.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.OstoskoriDG.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.OstoskoriDG.BackgroundColor = System.Drawing.Color.White;
+            this.OstoskoriDG.BackgroundColor = System.Drawing.Color.Beige;
             this.OstoskoriDG.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.OstoskoriDG.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.OstoskoriDG.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Beige;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.OstoskoriDG.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.OstoskoriDG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.OstoskoriDG.GridColor = System.Drawing.Color.Beige;
-            this.OstoskoriDG.Location = new System.Drawing.Point(207, 121);
+            this.OstoskoriDG.Location = new System.Drawing.Point(251, 124);
             this.OstoskoriDG.Name = "OstoskoriDG";
+            this.OstoskoriDG.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.Beige;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.OstoskoriDG.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.OstoskoriDG.RowHeadersVisible = false;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.Beige;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OstoskoriDG.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.OstoskoriDG.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.OstoskoriDG.Size = new System.Drawing.Size(686, 254);
+            this.OstoskoriDG.Size = new System.Drawing.Size(605, 254);
             this.OstoskoriDG.TabIndex = 1;
             // 
             // OstoskoriPN
@@ -522,6 +442,7 @@
             this.OstoskoriPN.Controls.Add(this.OstoskoriPoistaBT);
             this.OstoskoriPN.Controls.Add(this.OstoskoriDG);
             this.OstoskoriPN.Controls.Add(this.OKoriOtsikko);
+            this.OstoskoriPN.Controls.Add(this.pictureBox2);
             this.OstoskoriPN.Location = new System.Drawing.Point(0, 86);
             this.OstoskoriPN.Name = "OstoskoriPN";
             this.OstoskoriPN.Size = new System.Drawing.Size(1106, 495);
@@ -530,12 +451,15 @@
             // 
             // OstoskoriPoistaBT
             // 
-            this.OstoskoriPoistaBT.Location = new System.Drawing.Point(207, 382);
+            this.OstoskoriPoistaBT.BackColor = System.Drawing.Color.IndianRed;
+            this.OstoskoriPoistaBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.OstoskoriPoistaBT.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OstoskoriPoistaBT.Location = new System.Drawing.Point(251, 384);
             this.OstoskoriPoistaBT.Name = "OstoskoriPoistaBT";
-            this.OstoskoriPoistaBT.Size = new System.Drawing.Size(107, 30);
+            this.OstoskoriPoistaBT.Size = new System.Drawing.Size(118, 34);
             this.OstoskoriPoistaBT.TabIndex = 2;
             this.OstoskoriPoistaBT.Text = "Poista valinta";
-            this.OstoskoriPoistaBT.UseVisualStyleBackColor = true;
+            this.OstoskoriPoistaBT.UseVisualStyleBackColor = false;
             this.OstoskoriPoistaBT.Click += new System.EventHandler(this.OstoskoriPoistaBT_Click);
             // 
             // MaksaPN
@@ -555,6 +479,7 @@
             this.MaksaPN.Controls.Add(this.label13);
             this.MaksaPN.Controls.Add(this.label12);
             this.MaksaPN.Controls.Add(this.label11);
+            this.MaksaPN.Controls.Add(this.pictureBox1);
             this.MaksaPN.Location = new System.Drawing.Point(0, 86);
             this.MaksaPN.Name = "MaksaPN";
             this.MaksaPN.Size = new System.Drawing.Size(1106, 495);
@@ -563,12 +488,15 @@
             // 
             // MaksaTilausBT
             // 
-            this.MaksaTilausBT.Location = new System.Drawing.Point(513, 418);
+            this.MaksaTilausBT.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.MaksaTilausBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MaksaTilausBT.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaksaTilausBT.Location = new System.Drawing.Point(805, 384);
             this.MaksaTilausBT.Name = "MaksaTilausBT";
             this.MaksaTilausBT.Size = new System.Drawing.Size(122, 38);
             this.MaksaTilausBT.TabIndex = 15;
-            this.MaksaTilausBT.Text = "Maksa tilaus";
-            this.MaksaTilausBT.UseVisualStyleBackColor = true;
+            this.MaksaTilausBT.Text = "Lähetä tilaus";
+            this.MaksaTilausBT.UseVisualStyleBackColor = false;
             this.MaksaTilausBT.Click += new System.EventHandler(this.MaksaTilausBT_Click);
             // 
             // MaksuTapaCB
@@ -578,7 +506,7 @@
             "Verkkopankki",
             "Pankkikortti",
             "Käteinen toimitettaessa"});
-            this.MaksuTapaCB.Location = new System.Drawing.Point(483, 358);
+            this.MaksuTapaCB.Location = new System.Drawing.Point(806, 346);
             this.MaksuTapaCB.Name = "MaksuTapaCB";
             this.MaksuTapaCB.Size = new System.Drawing.Size(200, 24);
             this.MaksuTapaCB.TabIndex = 14;
@@ -588,7 +516,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Bahnschrift SemiBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(370, 82);
+            this.label17.Location = new System.Drawing.Point(668, 70);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(338, 29);
             this.label17.TabIndex = 12;
@@ -596,42 +524,42 @@
             // 
             // EmailTB
             // 
-            this.EmailTB.Location = new System.Drawing.Point(482, 310);
+            this.EmailTB.Location = new System.Drawing.Point(805, 298);
             this.EmailTB.Name = "EmailTB";
             this.EmailTB.Size = new System.Drawing.Size(201, 22);
             this.EmailTB.TabIndex = 11;
             // 
             // PuhTB
             // 
-            this.PuhTB.Location = new System.Drawing.Point(482, 275);
+            this.PuhTB.Location = new System.Drawing.Point(805, 263);
             this.PuhTB.Name = "PuhTB";
             this.PuhTB.Size = new System.Drawing.Size(201, 22);
             this.PuhTB.TabIndex = 10;
             // 
             // PstNumTB
             // 
-            this.PstNumTB.Location = new System.Drawing.Point(482, 239);
+            this.PstNumTB.Location = new System.Drawing.Point(805, 227);
             this.PstNumTB.Name = "PstNumTB";
             this.PstNumTB.Size = new System.Drawing.Size(201, 22);
             this.PstNumTB.TabIndex = 9;
             // 
             // OsoiteTB
             // 
-            this.OsoiteTB.Location = new System.Drawing.Point(483, 204);
+            this.OsoiteTB.Location = new System.Drawing.Point(806, 192);
             this.OsoiteTB.Name = "OsoiteTB";
             this.OsoiteTB.Size = new System.Drawing.Size(201, 22);
             this.OsoiteTB.TabIndex = 8;
             // 
             // SnimiTB
             // 
-            this.SnimiTB.Location = new System.Drawing.Point(482, 172);
+            this.SnimiTB.Location = new System.Drawing.Point(805, 160);
             this.SnimiTB.Name = "SnimiTB";
             this.SnimiTB.Size = new System.Drawing.Size(201, 22);
             this.SnimiTB.TabIndex = 7;
             // 
             // EnimiTB
             // 
-            this.EnimiTB.Location = new System.Drawing.Point(482, 138);
+            this.EnimiTB.Location = new System.Drawing.Point(805, 126);
             this.EnimiTB.Name = "EnimiTB";
             this.EnimiTB.Size = new System.Drawing.Size(201, 22);
             this.EnimiTB.TabIndex = 6;
@@ -639,56 +567,146 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(381, 313);
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(673, 298);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(78, 16);
+            this.label16.Size = new System.Drawing.Size(93, 20);
             this.label16.TabIndex = 5;
             this.label16.Text = "Sähköposti:";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(381, 278);
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(673, 263);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(99, 16);
+            this.label15.Size = new System.Drawing.Size(119, 20);
             this.label15.TabIndex = 4;
             this.label15.Text = "Puhelinnumero:";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(381, 242);
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(673, 227);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(85, 16);
+            this.label14.Size = new System.Drawing.Size(102, 20);
             this.label14.TabIndex = 3;
             this.label14.Text = "Postinumero:";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(381, 207);
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(673, 192);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(72, 16);
+            this.label13.Size = new System.Drawing.Size(86, 20);
             this.label13.TabIndex = 2;
             this.label13.Text = "Lähiosoite:";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(381, 175);
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(673, 160);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(64, 16);
+            this.label12.Size = new System.Drawing.Size(78, 20);
             this.label12.TabIndex = 1;
             this.label12.Text = "Sukunimi:";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(381, 141);
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(673, 126);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(53, 16);
+            this.label11.Size = new System.Drawing.Size(66, 20);
             this.label11.TabIndex = 0;
             this.label11.Text = "Etunimi:";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Bahnschrift SemiBold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.MediumAquamarine;
+            this.label18.Location = new System.Drawing.Point(257, 36);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(112, 33);
+            this.label18.TabIndex = 4;
+            this.label18.Text = "Tuotteet";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Bahnschrift SemiBold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.Color.MediumAquamarine;
+            this.label19.Location = new System.Drawing.Point(533, 36);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(132, 33);
+            this.label19.TabIndex = 5;
+            this.label19.Text = "Ostoskori";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Bahnschrift SemiBold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.Color.MediumAquamarine;
+            this.label20.Location = new System.Drawing.Point(825, 36);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(92, 33);
+            this.label20.TabIndex = 6;
+            this.label20.Text = "Maksa";
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.BackColor = System.Drawing.Color.Beige;
+            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox1.Font = new System.Drawing.Font("Baskerville Old Face", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox1.Location = new System.Drawing.Point(40, 133);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(536, 354);
+            this.richTextBox1.TabIndex = 12;
+            this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(195, 42);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(127, 25);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Valitse pizza";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(107, 45);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(151, 25);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "Valitse täytteet";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::pizza_app.Properties.Resources.pizza2_backg;
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(1106, 495);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::pizza_app.Properties.Resources.pizza1_backg;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(576, 495);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 16;
+            this.pictureBox1.TabStop = false;
             // 
             // PizzaForm
             // 
@@ -696,11 +714,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Beige;
             this.ClientSize = new System.Drawing.Size(1106, 664);
-            this.Controls.Add(this.MaksaPN);
             this.Controls.Add(this.OstoskoriPN);
+            this.Controls.Add(this.MaksaPN);
+            this.Controls.Add(this.TuotteetPN);
             this.Controls.Add(this.FooterPN);
             this.Controls.Add(this.HeaderPN);
-            this.Controls.Add(this.TuotteetPN);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "PizzaForm";
@@ -721,6 +739,8 @@
             this.OstoskoriPN.PerformLayout();
             this.MaksaPN.ResumeLayout(false);
             this.MaksaPN.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -728,9 +748,6 @@
         #endregion
         private System.Windows.Forms.Panel HeaderPN;
         private System.Windows.Forms.Label HeaderLB;
-        private System.Windows.Forms.Button OstoskoriBT;
-        private System.Windows.Forms.Button MaksaBT;
-        private System.Windows.Forms.Button TuotteetBT;
         private System.Windows.Forms.SplitContainer TuotteetPN;
         private System.Windows.Forms.Button LisaaPizzaBT;
         private System.Windows.Forms.ComboBox PizzaCB;
@@ -740,16 +757,6 @@
         private System.Windows.Forms.Label SummaLB;
         private System.Windows.Forms.Label SummaTitleLB;
         private System.Windows.Forms.Button OstoskoriinBT;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button PTayte3BT;
         private System.Windows.Forms.Button PTayte1BT;
         private System.Windows.Forms.Button PTayte4BT;
@@ -780,6 +787,14 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 
