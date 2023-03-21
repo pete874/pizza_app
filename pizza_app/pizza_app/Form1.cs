@@ -57,11 +57,11 @@ namespace pizza_app
             {
                 TayteCB.Visible = true;
                 LisaaTayteBT.Visible = true;
-                TuotteetPN.Panel2.Visible = true;
+                TuotteetPNPB.Visible = false;
             }
             else
             {
-                TuotteetPN.Panel2.Visible = false;
+                TuotteetPNPB.Visible = true;
             }
         }
 

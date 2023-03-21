@@ -28,16 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PizzaForm));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.HeaderPN = new System.Windows.Forms.Panel();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
             this.HeaderLB = new System.Windows.Forms.Label();
             this.TuotteetPN = new System.Windows.Forms.SplitContainer();
+            this.label1 = new System.Windows.Forms.Label();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.LisaaPizzaBT = new System.Windows.Forms.Button();
             this.PizzaCB = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.PTayte3BT = new System.Windows.Forms.Button();
             this.PTayte1BT = new System.Windows.Forms.Button();
             this.PTayte4BT = new System.Windows.Forms.Button();
@@ -74,12 +80,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.TuotteetPNPB = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.HeaderPN.SuspendLayout();
@@ -91,6 +92,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.OstoskoriDG)).BeginInit();
             this.OstoskoriPN.SuspendLayout();
             this.MaksaPN.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TuotteetPNPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -109,6 +111,39 @@
             this.HeaderPN.Name = "HeaderPN";
             this.HeaderPN.Size = new System.Drawing.Size(1106, 87);
             this.HeaderPN.TabIndex = 1;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Bahnschrift SemiBold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.Color.MediumAquamarine;
+            this.label20.Location = new System.Drawing.Point(825, 36);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(92, 33);
+            this.label20.TabIndex = 6;
+            this.label20.Text = "Maksa";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Bahnschrift SemiBold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.Color.MediumAquamarine;
+            this.label19.Location = new System.Drawing.Point(533, 36);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(132, 33);
+            this.label19.TabIndex = 5;
+            this.label19.Text = "Ostoskori";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Bahnschrift SemiBold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.MediumAquamarine;
+            this.label18.Location = new System.Drawing.Point(257, 36);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(112, 33);
+            this.label18.TabIndex = 4;
+            this.label18.Text = "Tuotteet";
             // 
             // HeaderLB
             // 
@@ -137,6 +172,7 @@
             // TuotteetPN.Panel2
             // 
             this.TuotteetPN.Panel2.BackColor = System.Drawing.Color.Beige;
+            this.TuotteetPN.Panel2.Controls.Add(this.TuotteetPNPB);
             this.TuotteetPN.Panel2.Controls.Add(this.label2);
             this.TuotteetPN.Panel2.Controls.Add(this.PTayte3BT);
             this.TuotteetPN.Panel2.Controls.Add(this.PTayte1BT);
@@ -149,8 +185,29 @@
             this.TuotteetPN.Panel2.Controls.Add(this.LisaaTayteBT);
             this.TuotteetPN.Panel2.Controls.Add(this.TayteCB);
             this.TuotteetPN.Size = new System.Drawing.Size(1106, 495);
-            this.TuotteetPN.SplitterDistance = 638;
+            this.TuotteetPN.SplitterDistance = 599;
             this.TuotteetPN.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(195, 42);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(127, 25);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Valitse pizza";
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.BackColor = System.Drawing.Color.Beige;
+            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox1.Font = new System.Drawing.Font("Baskerville Old Face", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox1.Location = new System.Drawing.Point(40, 133);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(536, 354);
+            this.richTextBox1.TabIndex = 12;
+            this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
             // 
             // LisaaPizzaBT
             // 
@@ -180,6 +237,16 @@
             this.PizzaCB.TabIndex = 0;
             this.PizzaCB.Text = "Valitse pizza...";
             this.PizzaCB.SelectedIndexChanged += new System.EventHandler(this.PizzaCB_SelectedIndexChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(107, 45);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(151, 25);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "Valitse täytteet";
             // 
             // PTayte3BT
             // 
@@ -399,39 +466,39 @@
             // 
             // OstoskoriDG
             // 
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Beige;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OstoskoriDG.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Beige;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OstoskoriDG.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.OstoskoriDG.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.OstoskoriDG.BackgroundColor = System.Drawing.Color.Beige;
             this.OstoskoriDG.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.OstoskoriDG.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.OstoskoriDG.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Beige;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.OstoskoriDG.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Beige;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.OstoskoriDG.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.OstoskoriDG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.OstoskoriDG.GridColor = System.Drawing.Color.Beige;
             this.OstoskoriDG.Location = new System.Drawing.Point(251, 124);
             this.OstoskoriDG.Name = "OstoskoriDG";
             this.OstoskoriDG.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.Beige;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.OstoskoriDG.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Beige;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.OstoskoriDG.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.OstoskoriDG.RowHeadersVisible = false;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.Beige;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OstoskoriDG.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Beige;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OstoskoriDG.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.OstoskoriDG.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.OstoskoriDG.Size = new System.Drawing.Size(605, 254);
             this.OstoskoriDG.TabIndex = 1;
@@ -624,69 +691,15 @@
             this.label11.TabIndex = 0;
             this.label11.Text = "Etunimi:";
             // 
-            // label18
+            // TuotteetPNPB
             // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Bahnschrift SemiBold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.MediumAquamarine;
-            this.label18.Location = new System.Drawing.Point(257, 36);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(112, 33);
-            this.label18.TabIndex = 4;
-            this.label18.Text = "Tuotteet";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Bahnschrift SemiBold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.MediumAquamarine;
-            this.label19.Location = new System.Drawing.Point(533, 36);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(132, 33);
-            this.label19.TabIndex = 5;
-            this.label19.Text = "Ostoskori";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Bahnschrift SemiBold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.Color.MediumAquamarine;
-            this.label20.Location = new System.Drawing.Point(825, 36);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(92, 33);
-            this.label20.TabIndex = 6;
-            this.label20.Text = "Maksa";
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.BackColor = System.Drawing.Color.Beige;
-            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox1.Font = new System.Drawing.Font("Baskerville Old Face", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox1.Location = new System.Drawing.Point(40, 133);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(536, 354);
-            this.richTextBox1.TabIndex = 12;
-            this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(195, 42);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(127, 25);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "Valitse pizza";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(107, 45);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(151, 25);
-            this.label2.TabIndex = 14;
-            this.label2.Text = "Valitse täytteet";
+            this.TuotteetPNPB.Image = global::pizza_app.Properties.Resources.pizza3_backg;
+            this.TuotteetPNPB.Location = new System.Drawing.Point(3, 0);
+            this.TuotteetPNPB.Name = "TuotteetPNPB";
+            this.TuotteetPNPB.Size = new System.Drawing.Size(500, 495);
+            this.TuotteetPNPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.TuotteetPNPB.TabIndex = 15;
+            this.TuotteetPNPB.TabStop = false;
             // 
             // pictureBox2
             // 
@@ -714,9 +727,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Beige;
             this.ClientSize = new System.Drawing.Size(1106, 664);
+            this.Controls.Add(this.TuotteetPN);
             this.Controls.Add(this.OstoskoriPN);
             this.Controls.Add(this.MaksaPN);
-            this.Controls.Add(this.TuotteetPN);
             this.Controls.Add(this.FooterPN);
             this.Controls.Add(this.HeaderPN);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -739,6 +752,7 @@
             this.OstoskoriPN.PerformLayout();
             this.MaksaPN.ResumeLayout(false);
             this.MaksaPN.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TuotteetPNPB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -795,6 +809,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox TuotteetPNPB;
     }
 }
 
