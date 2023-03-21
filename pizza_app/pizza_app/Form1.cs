@@ -41,8 +41,8 @@ namespace pizza_app
 
             // Muista muuttaa Visible = false
             OstoskoriDG.Columns["Hinta"].Visible = false;
-
-           
+            // Vaihdetaan kulloinkin auki olevan välilehden otsikolle korostusväri
+            TuotteetHeaderLB.ForeColor = Color.Green;        
 
         }
 
@@ -210,6 +210,9 @@ namespace pizza_app
             MaksamaanBT.Visible = true;
             TakaisinBT.Visible = true;
             TuotteetPN.Visible = false;
+
+            TuotteetHeaderLB.ForeColor = Color.MediumAquamarine;
+            OKHeaderLB.ForeColor = Color.Green;
         }
 
 
@@ -233,6 +236,8 @@ namespace pizza_app
                 OstoskoriinBT.Visible = true;
                 TuotteetPN.Visible = true;
                 OstoskoriPN.Visible = false;
+                TuotteetHeaderLB.ForeColor = Color.Green;
+                OKHeaderLB.ForeColor = Color.MediumAquamarine;
             }
 
             if (MaksaPN.Visible == true)
@@ -243,6 +248,8 @@ namespace pizza_app
                 TakaisinBT.Visible = true;
                 MaksaPN.Visible = false;
                 OstoskoriinBT.Visible = false;
+                OKHeaderLB.ForeColor = Color.Green;
+                MaksaHeaderLB.ForeColor = Color.MediumAquamarine;
             }
 
         }
@@ -281,9 +288,10 @@ namespace pizza_app
 
         }
 
-        //tilauksen maksu ja lisäys tietokantaan, josta tilauksen ovat mahdollista saada keittiön puolelle haettua tietokannasta
+        //tilauksen maksu ja lisäys tietokantaan, josta tilaukset ovat mahdollista saada keittiön puolelle haettua tietokannasta
         private void MaksaTilausBT_Click(object sender, EventArgs e)
         {
+            // Tekstikentät muuttujiin
             String etunimi = EnimiTB.Text;
             String sukunimi = SnimiTB.Text;
             String lahiosoite = OsoiteTB.Text;
@@ -302,7 +310,7 @@ namespace pizza_app
             }
 
             MessageBox.Show(tuotteet.ToString());
-
+            //Tarkistetaan että tekstikentät eivät ole tyhjiä
             if (etunimi.Trim().Equals("") || sukunimi.Trim().Equals("") || lahiosoite.Trim().Equals("") || postinumero.Trim().Equals("") || puhelin.Trim().Equals("") || email.Trim().Equals("") || tuotteet.Trim().Equals(""))
             {
                 MessageBox.Show("Täytä kaikki kentät", "Virhe syötössä", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -310,15 +318,28 @@ namespace pizza_app
             else
             {
                 Boolean LisaaTilaus = pizzat.LisaaTilaus(etunimi, sukunimi, lahiosoite, postinumero, puhelin, email, tuotteet);
+                // Mikäli tilaus onnistuu, tyhjennetään datagrid, ostoskorin loppusumma sekä tekstikentät
                 if (LisaaTilaus)
                 {
                     MessageBox.Show("Uusi tilaus lisätty!", "Tilaus", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    EnimiTB.Text = "";
+                    SnimiTB.Text = "";
+                    OsoiteTB.Text = "";
+                    PstNumTB.Text = "";
+                    PuhTB.Text = "";
+                    EmailTB.Text = "";
+                    tuotteet = "";
+                    loppuSumma = 0;
+                    SummaLB.Text = loppuSumma.ToString() + "€";
+                    OstoskoriDG.Rows.Clear();
+
                 }
                 else
                 {
                     MessageBox.Show("Uutta tilausta ei pystytty lisäämään.", "Tilaus", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+
         }
 
         private void MaksamaanBT_Click(object sender, EventArgs e)
@@ -328,7 +349,8 @@ namespace pizza_app
             MaksamaanBT.Visible = false;
             OstoskoriinBT.Visible = false;
             OstoskoriPN.Visible = false;
-
+            MaksaHeaderLB.ForeColor = Color.Green;
+            OKHeaderLB.ForeColor = Color.MediumAquamarine;
         }
     }
 }

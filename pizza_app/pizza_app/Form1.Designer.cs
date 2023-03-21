@@ -34,9 +34,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.HeaderPN = new System.Windows.Forms.Panel();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
+            this.MaksaHeaderLB = new System.Windows.Forms.Label();
+            this.OKHeaderLB = new System.Windows.Forms.Label();
+            this.TuotteetHeaderLB = new System.Windows.Forms.Label();
             this.HeaderLB = new System.Windows.Forms.Label();
             this.TuotteetPN = new System.Windows.Forms.SplitContainer();
             this.label1 = new System.Windows.Forms.Label();
@@ -100,9 +100,9 @@
             // HeaderPN
             // 
             this.HeaderPN.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.HeaderPN.Controls.Add(this.label20);
-            this.HeaderPN.Controls.Add(this.label19);
-            this.HeaderPN.Controls.Add(this.label18);
+            this.HeaderPN.Controls.Add(this.MaksaHeaderLB);
+            this.HeaderPN.Controls.Add(this.OKHeaderLB);
+            this.HeaderPN.Controls.Add(this.TuotteetHeaderLB);
             this.HeaderPN.Controls.Add(this.HeaderLB);
             this.HeaderPN.Dock = System.Windows.Forms.DockStyle.Top;
             this.HeaderPN.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -112,38 +112,38 @@
             this.HeaderPN.Size = new System.Drawing.Size(1106, 87);
             this.HeaderPN.TabIndex = 1;
             // 
-            // label20
+            // MaksaHeaderLB
             // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Bahnschrift SemiBold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.Color.MediumAquamarine;
-            this.label20.Location = new System.Drawing.Point(825, 36);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(92, 33);
-            this.label20.TabIndex = 6;
-            this.label20.Text = "Maksa";
+            this.MaksaHeaderLB.AutoSize = true;
+            this.MaksaHeaderLB.Font = new System.Drawing.Font("Bahnschrift SemiBold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaksaHeaderLB.ForeColor = System.Drawing.Color.MediumAquamarine;
+            this.MaksaHeaderLB.Location = new System.Drawing.Point(825, 36);
+            this.MaksaHeaderLB.Name = "MaksaHeaderLB";
+            this.MaksaHeaderLB.Size = new System.Drawing.Size(92, 33);
+            this.MaksaHeaderLB.TabIndex = 6;
+            this.MaksaHeaderLB.Text = "Maksa";
             // 
-            // label19
+            // OKHeaderLB
             // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Bahnschrift SemiBold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.MediumAquamarine;
-            this.label19.Location = new System.Drawing.Point(533, 36);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(132, 33);
-            this.label19.TabIndex = 5;
-            this.label19.Text = "Ostoskori";
+            this.OKHeaderLB.AutoSize = true;
+            this.OKHeaderLB.Font = new System.Drawing.Font("Bahnschrift SemiBold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OKHeaderLB.ForeColor = System.Drawing.Color.MediumAquamarine;
+            this.OKHeaderLB.Location = new System.Drawing.Point(533, 36);
+            this.OKHeaderLB.Name = "OKHeaderLB";
+            this.OKHeaderLB.Size = new System.Drawing.Size(132, 33);
+            this.OKHeaderLB.TabIndex = 5;
+            this.OKHeaderLB.Text = "Ostoskori";
             // 
-            // label18
+            // TuotteetHeaderLB
             // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Bahnschrift SemiBold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.MediumAquamarine;
-            this.label18.Location = new System.Drawing.Point(257, 36);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(112, 33);
-            this.label18.TabIndex = 4;
-            this.label18.Text = "Tuotteet";
+            this.TuotteetHeaderLB.AutoSize = true;
+            this.TuotteetHeaderLB.Font = new System.Drawing.Font("Bahnschrift SemiBold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TuotteetHeaderLB.ForeColor = System.Drawing.Color.MediumAquamarine;
+            this.TuotteetHeaderLB.Location = new System.Drawing.Point(257, 36);
+            this.TuotteetHeaderLB.Name = "TuotteetHeaderLB";
+            this.TuotteetHeaderLB.Size = new System.Drawing.Size(112, 33);
+            this.TuotteetHeaderLB.TabIndex = 4;
+            this.TuotteetHeaderLB.Text = "Tuotteet";
             // 
             // HeaderLB
             // 
@@ -801,9 +801,9 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label MaksaHeaderLB;
+        private System.Windows.Forms.Label OKHeaderLB;
+        private System.Windows.Forms.Label TuotteetHeaderLB;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
