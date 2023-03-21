@@ -55,6 +55,15 @@ namespace pizza_app
             //jos omavalinta valitaan, laitetaan täytteiden valinta näkyville
             if (pizza == "Oma valinta 10€")
             {
+                Tayte1LB.Visible = false;
+                Tayte2LB.Visible = false;
+                Tayte3LB.Visible = false;
+                Tayte4LB.Visible = false;
+
+                PTayte1BT.Visible = false;
+                PTayte2BT.Visible = false;
+                PTayte3BT.Visible = false;
+                PTayte4BT.Visible = false;
                 TayteCB.Visible = true;
                 LisaaTayteBT.Visible = true;
                 TuotteetPNPB.Visible = false;
@@ -62,6 +71,10 @@ namespace pizza_app
             else
             {
                 TuotteetPNPB.Visible = true;
+                tayte1 = "";
+                tayte2 = "";
+                tayte3 = "";
+                tayte4 = "";
             }
         }
 
