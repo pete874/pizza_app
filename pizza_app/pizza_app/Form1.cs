@@ -55,6 +55,7 @@ namespace pizza_app
             //jos omavalinta valitaan, laitetaan täytteiden valinta näkyville
             if (pizza == "Oma valinta 10€")
             {
+                //piilotetaan aluksi täyte labelit ja buttonit
                 Tayte1LB.Visible = false;
                 Tayte2LB.Visible = false;
                 Tayte3LB.Visible = false;
@@ -218,6 +219,7 @@ namespace pizza_app
             tayte4 = "";
         }
 
+        //ostoskori näkyviin nappia painamalla
         private void OstoskoriinBT_Click(object sender, EventArgs e)
         {
             OstoskoriPN.Visible = true;
@@ -356,6 +358,7 @@ namespace pizza_app
 
         }
 
+        //Maksutiedot näkyviin nappia painamalla
         private void MaksamaanBT_Click(object sender, EventArgs e)
         {
 
