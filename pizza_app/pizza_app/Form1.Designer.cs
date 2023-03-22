@@ -43,6 +43,7 @@
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.LisaaPizzaBT = new System.Windows.Forms.Button();
             this.PizzaCB = new System.Windows.Forms.ComboBox();
+            this.TuotteetPNPB = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.PTayte3BT = new System.Windows.Forms.Button();
             this.PTayte1BT = new System.Windows.Forms.Button();
@@ -64,6 +65,7 @@
             this.OstoskoriDG = new System.Windows.Forms.DataGridView();
             this.OstoskoriPN = new System.Windows.Forms.Panel();
             this.OstoskoriPoistaBT = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.MaksaPN = new System.Windows.Forms.Panel();
             this.MaksaTilausBT = new System.Windows.Forms.Button();
             this.MaksuTapaCB = new System.Windows.Forms.ComboBox();
@@ -80,20 +82,18 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.TuotteetPNPB = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.HeaderPN.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TuotteetPN)).BeginInit();
             this.TuotteetPN.Panel1.SuspendLayout();
             this.TuotteetPN.Panel2.SuspendLayout();
             this.TuotteetPN.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TuotteetPNPB)).BeginInit();
             this.FooterPN.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.OstoskoriDG)).BeginInit();
             this.OstoskoriPN.SuspendLayout();
-            this.MaksaPN.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.TuotteetPNPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.MaksaPN.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -237,6 +237,16 @@
             this.PizzaCB.TabIndex = 0;
             this.PizzaCB.Text = "Valitse pizza...";
             this.PizzaCB.SelectedIndexChanged += new System.EventHandler(this.PizzaCB_SelectedIndexChanged);
+            // 
+            // TuotteetPNPB
+            // 
+            this.TuotteetPNPB.Image = global::pizza_app.Properties.Resources.pizza3_backg;
+            this.TuotteetPNPB.Location = new System.Drawing.Point(3, 0);
+            this.TuotteetPNPB.Name = "TuotteetPNPB";
+            this.TuotteetPNPB.Size = new System.Drawing.Size(500, 495);
+            this.TuotteetPNPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.TuotteetPNPB.TabIndex = 15;
+            this.TuotteetPNPB.TabStop = false;
             // 
             // label2
             // 
@@ -466,6 +476,7 @@
             // 
             // OstoskoriDG
             // 
+            this.OstoskoriDG.AllowUserToAddRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.Beige;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OstoskoriDG.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
@@ -528,6 +539,16 @@
             this.OstoskoriPoistaBT.Text = "Poista valinta";
             this.OstoskoriPoistaBT.UseVisualStyleBackColor = false;
             this.OstoskoriPoistaBT.Click += new System.EventHandler(this.OstoskoriPoistaBT_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::pizza_app.Properties.Resources.pizza2_backg;
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(1106, 495);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
             // 
             // MaksaPN
             // 
@@ -691,26 +712,6 @@
             this.label11.TabIndex = 0;
             this.label11.Text = "Etunimi:";
             // 
-            // TuotteetPNPB
-            // 
-            this.TuotteetPNPB.Image = global::pizza_app.Properties.Resources.pizza3_backg;
-            this.TuotteetPNPB.Location = new System.Drawing.Point(3, 0);
-            this.TuotteetPNPB.Name = "TuotteetPNPB";
-            this.TuotteetPNPB.Size = new System.Drawing.Size(500, 495);
-            this.TuotteetPNPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.TuotteetPNPB.TabIndex = 15;
-            this.TuotteetPNPB.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::pizza_app.Properties.Resources.pizza2_backg;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(1106, 495);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::pizza_app.Properties.Resources.pizza1_backg;
@@ -745,15 +746,15 @@
             this.TuotteetPN.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TuotteetPN)).EndInit();
             this.TuotteetPN.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.TuotteetPNPB)).EndInit();
             this.FooterPN.ResumeLayout(false);
             this.FooterPN.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.OstoskoriDG)).EndInit();
             this.OstoskoriPN.ResumeLayout(false);
             this.OstoskoriPN.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.MaksaPN.ResumeLayout(false);
             this.MaksaPN.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.TuotteetPNPB)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
