@@ -87,6 +87,7 @@ namespace pizza_app
 
         private void LisaaPizzaBT_Click(object sender, EventArgs e)
         {
+            //luodaan tarvittavat muuttujat
             String tuote = PizzaCB.Text.ToString();
             String hinta = PizzaCB.SelectedValue.ToString();
             int hintaInt = Convert.ToInt16(hinta);
